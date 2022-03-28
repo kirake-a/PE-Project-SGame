@@ -14,15 +14,18 @@ int main(){
     // Funciones para la presentacion del juego -- llamadas
     presentacionInicial();
     vida = intro();
-    vida = introPostContexto(vida);
 
-    // EscenarioCamino funcion -- llamadas
-    vida = escenarioCamino(vida);
+    if(vida > 0){
+        vida = introPostContexto(vida);
+
+        // EscenarioCamino funcion -- llamadas
+        vida = escenarioCamino(vida);
+    }
 
     return 0;
 }
 
-/* ---------------------------- Bloque de codigo escrito por Ruben ---------------------------- */
+/* ---------------------------- Bloque de codigo escrito por RUBEN ---------------------------- */
 void presentacionInicial()
 {
     printf("Bienvenido a este minijuego. \n\nCaperucita Roja. The game...");
@@ -31,7 +34,7 @@ void presentacionInicial()
 
 int intro()
 {
-    int vida;
+    int vida, opcion;
     vida = 0;
     printf("\n\nEs de noche y te acercas a la chimenea para calentarte. Tu madre se encuentra a tu lado.");
     printf("\n-Ponte tu caperucita roka -te dice tu madre-. Hace mucho frio y tienes un largo camino por");
@@ -42,11 +45,26 @@ int intro()
 
     vida = 3;
 
+    //Sentencia de control para poder finalizar el programa hasta este punto...
+    printf("\n\nSi desea continuar presione 1, sino presione 0: ");
+    canf("%d", &opcion);
+
+    /* Si la opcion es > 0 entonces se devuelven 0 puntos de vida y se sale de la estructura if de main
+    lo que termina el programa... */
+    if(opcion > 0){
+        vida = vida;
+    }
+    else if (opcion <= 0){
+        vida = 0;
+    }
+
     return vida;
 }
 
 int introPostContexto(int vida)
 {
+    int opcion;
+
     printf("\n\n-¡La abuela se encuentra enferma y no se puede levantar de su cama! -dice con tristeza tu");
     printf("\nmadre-. ¿Crees que puedas entregarle esta canasta a tu abuela?");
 
@@ -58,10 +76,23 @@ int introPostContexto(int vida)
 
     vida += 2;
 
+    // Sentencia de control para continuar o finalizar el programa...
+    printf("\n\nSi desea continuar presione 1, sino presione 0: ");
+    scanf("%d", &opcion);
+
+    if (opcion > 0)
+    {
+        vida = vida;
+    }
+    else if (opcion <= 0)
+    {
+        vida = 0;
+    }
+
     return vida;
 }
 
-/* ---------------------------- Comienza el modulo escrito por Caro ---------------------------- */
+/* ---------------------------- Comienza el modulo escrito por CARO ---------------------------- */
 
 // Función camino
 int escenarioCamino(int vida)
