@@ -128,9 +128,8 @@ int escenarioCamino(int vida)
         scanf("%d", &camino1);
     }
 
-    // ACCIONES DEL CAMINO 1,2 Y 3
-    switch (camino1)
-    {
+    // ACCIONES DEL CAMINO 1, 2 Y 3
+    switch (camino1){
     case 1: // CAMINO DEL PRUEBLO
         printf("\nDecides tomar el ancho camino que lleva al pueblo. En el pueblo toda la gente te mira raro ");
         printf("\ndebido a que no está acostumbrada a ver rostros nuevos. Estando ahí ves un pequeño puesto");
