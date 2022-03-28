@@ -11,10 +11,12 @@ int escenarioCamino(int vida);
 int main(){
     int vida;
 
+    // Funciones para la presentacion del juego -- llamadas
     presentacionInicial();
     vida = intro();
     vida = introPostContexto(vida);
 
+    // EscenarioCamino funcion -- llamadas
     vida = escenarioCamino(vida);
 
     return 0;
