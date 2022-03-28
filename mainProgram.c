@@ -20,6 +20,7 @@ int main(){
     return 0;
 }
 
+/* ---------------------------- Bloque de codigo escrito por Ruben ---------------------------- */
 void presentacionInicial()
 {
     printf("Bienvenido a este minijuego. \n\nCaperucita Roja. The game...");
@@ -58,7 +59,8 @@ int introPostContexto(int vida)
     return vida;
 }
 
-/* Comienza el modulo escrito por Caro */
+/* ---------------------------- Comienza el modulo escrito por Caro ---------------------------- */
+
 // Función camino
 int escenarioCamino(int vida)
 {
