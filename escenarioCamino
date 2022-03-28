@@ -15,7 +15,7 @@ int escenarioCamino(int vida){
 	//PARA ELEGIR UN CAMINO DE LOS 3
 	printf("\n\nSales de tu casa y caminas por la vereda mientras que el viento sacude tus cabellos y la");
 	printf("\ncaperucita. Sigues hasta encontrarte con que la vereda por la que andabas se divide en tres");
-	printf("\ncaperucita. Sigues hasta encontrarte con que la vereda por la que andabas se divide en tres ");
+	printf("\nangostos caminos. El primer camino tiene escrito en un hermoso letrero que va al pueblo, el ");
 	printf("\nsegundo tiene un letrero desgastado y dice que lleva al bosque, mientras que el tercero cuenta");
 	printf("\ncon un letrero tan viejo que apenas se mantiene en pie y dice que se dirige al desierto de hielo.");
 	
