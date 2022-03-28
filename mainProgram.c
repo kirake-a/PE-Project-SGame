@@ -13,7 +13,7 @@ int main(){
 
     // Funciones para la presentacion del juego -- llamadas
     presentacionInicial();
-    vida = intro();
+    vida = introContexto();
 
     if(vida > 0){
         vida = introPostContexto(vida);
@@ -35,7 +35,7 @@ void presentacionInicial()
     printf("\n\nRecuerda que cada una de las decisiones que tomes influirá en como terminarás el juego... intenta no morir c:\n");
 }
 
-int intro()
+int introContexto()
 {
     int vida, opcion;
     vida = 0;
@@ -50,7 +50,7 @@ int intro()
 
     //Sentencia de control para poder finalizar el programa hasta este punto...
     printf("\n\nSi desea continuar presione 1, sino presione 0: ");
-    canf("%d", &opcion);
+    scanf("%d", &opcion);
 
     /* Si la opcion es > 0 entonces se devuelven 0 puntos de vida y se sale de la estructura if de main
     lo que termina el programa... */
