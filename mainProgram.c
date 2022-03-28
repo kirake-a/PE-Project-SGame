@@ -18,8 +18,11 @@ int main(){
     if(vida > 0){
         vida = introPostContexto(vida);
 
-        // EscenarioCamino funcion -- llamadas
-        vida = escenarioCamino(vida);
+        if(vida > 0){
+            // EscenarioCamino funcion -- llamadas
+            vida = escenarioCamino(vida);
+        }
+
     }
 
     return 0;
