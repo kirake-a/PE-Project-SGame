@@ -310,7 +310,7 @@ int escenarioCazador(int vida){
         break;
 
     case 2: // Combate con el cazador
-        printf("\n\nLe dices al viejo que lo que quieres es un oponente digno para pelear, entonce...");
+        printf("\n\nLe dices al viejo que lo que quieres es un oponente digno para pelear, entonces...");
         printf("\nEl señor se quita su abrigo de piel de lobo y deja al descubierto su torso repleto de cicatrices.");
         printf("\nEl viejo es robusto y parece que tiene la fuerza de un oso. ");
 
@@ -329,7 +329,9 @@ int escenarioCazador(int vida){
 
         printf("\n\nAhora eres más fuerte que el cazador. No creo que un lobo quiera toparse contigo. ");
         printf("\nEl primer golpe te lastimó. Vida -1.");
+
         vida = vida - 1;
+        
         printf("\nSi quieres seguir demostrando tu fuerza a lo largo de esta historia escribe '1': .");
         scanf("%d", &continuar);
 
