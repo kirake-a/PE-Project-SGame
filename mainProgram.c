@@ -7,6 +7,8 @@ int introContexto();
 int introPostContexto(int vida);
 // EscenarioCamino funcion
 int escenarioCamino(int vida);
+// ElLenador funcion
+int ElLenador(int vida);
 
 int main(){
     int vida;
@@ -21,6 +23,10 @@ int main(){
         if(vida > 0){
             // EscenarioCamino funcion -- llamadas
             vida = escenarioCamino(vida);
+
+            if(vida > 0){
+                vida = ElLenador(vida);
+            }
         }
 
     }
@@ -171,6 +177,13 @@ int escenarioCamino(int vida)
         }
 
         scanf("%d", &continuar);
+
+        if(continuar > 0){
+            vida = vida;
+        }
+        else if(continuar <= 0){
+            vida = 0;
+        }
         break;
 
     case 2: // CAMINO DEL BOSQUE
@@ -211,6 +224,15 @@ int escenarioCamino(int vida)
         }
 
         scanf("%d", &continuar); // Ok no evalue aquí si se pone otro número, porque solo es para poder abajo la función que sigue
+
+        if (continuar > 0)
+        {
+            vida = vida;
+        }
+        else if (continuar <= 0)
+        {
+            vida = 0;
+        }
         break;
 
     case 3: // CAMINO DEL DESIERTO de hielo
@@ -220,7 +242,18 @@ int escenarioCamino(int vida)
         printf("\nValiente, escriba '1' para continuar ");
 
         scanf("%d", &continuar);
+
+        if (continuar > 0)
+        {
+            vida = vida;
+        }
+        else if (continuar <= 0)
+        {
+            vida = 0;
+        }
         break;
     }
     return vida;
 }
+
+/* ---------------------------- Bloque de codigo escrito por Erick ---------------------------- */
