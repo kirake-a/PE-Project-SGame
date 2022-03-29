@@ -25,7 +25,12 @@ int main(){
             vida = escenarioCamino(vida);
 
             if(vida > 0){
-                vida = ElLenador(vida);
+                vida = escenarioCazador(vida); /* Falta leer el guion y comparar con el
+                el codigo y verificar la unidad entre code */
+
+                if(vida > 0){
+                    // Falta agregar el modulo de David... no se ha leido
+                }
             }
         }
 
@@ -274,8 +279,7 @@ int escenarioCazador(int vida){
     printf("\nEscribe tu opción: ");
     scanf("%d", &opcion);
 
-    while (opcion < 1 || opcion > 3)
-    {
+    while (opcion < 1 || opcion > 3){
         printf("\n\n¡Esa opción no existe! Inténtalo de nuevo.");
         printf("\nEscribe '1' para regalarle un delicioso pan de tu canasta al viejo.");
         printf("\nSi deseas retar a un pobre viejito a un combate escribe '2'.");
@@ -283,8 +287,8 @@ int escenarioCazador(int vida){
         printf("\nEscribe tu opción: ");
         scanf("%d", &opcion);
     }
-    switch (opcion)
-    {
+
+    switch (opcion){
     case 1: // Amistad con el cazador
         printf("\n\nLe regalas al viejo el pan.");
         printf("\n-¡Está buenísimo!- Exclama el señor y bocado a bocado su expresión fría e ");
@@ -295,6 +299,13 @@ int escenarioCazador(int vida){
         printf("\n\n¡Haz hecho un amigo, ahora tienes el poder de la amistad! Uy que cursi.");
         printf("\nEscribe '1' para continuar haciendo amistades a lo largo de esta historia.");
         scanf("%d", &continuar);
+
+        if(continuar > 0){
+            vida = vida;
+        }
+        else if(continuar <= 0){
+            vida = 0;
+        }
 
         break;
 
@@ -322,6 +333,13 @@ int escenarioCazador(int vida){
         printf("\nSi quieres seguir demostrando tu fuerza a lo largo de esta historia escribe '1': .");
         scanf("%d", &continuar);
 
+        if (continuar > 0){
+            vida = vida;
+        }
+        else if (continuar <= 0){
+            vida = 0;
+        }
+
         break;
 
     case 3: // Viejo enojado
@@ -331,6 +349,7 @@ int escenarioCazador(int vida){
 
         printf("\n\nTE HA COMIDO EL LOBO");
         printf("\nFIN DEL JUEGO ");
+
         vida = 0;
 
         break;
