@@ -10,6 +10,12 @@ int escenarioCamino(int vida);
 // ElLenador funcion
 int escenarioCazador(int vida);
 
+/* ---------------------------- Bloque de codigo escrito por RUBEN ALVARADO---------------------------- */
+
+/* FUNCION main(): Con esta funcion manejamos todo lo que ocurre con el resto de las funciones, se 
+puede decir que esta funcion es la que controla todo el programa segun las decisiones y los datos 
+que reciban las funciones especializadas. */
+/* FECHA: 26 de marzo 2022 */
 int main(){
     int vida;
 
@@ -39,13 +45,16 @@ int main(){
     return 0;
 }
 
-/* ---------------------------- Bloque de codigo escrito por RUBEN ---------------------------- */
+/* FECHA: 26 de marzo 2022 */
 void presentacionInicial()
 {
     printf("Bienvenido a este minijuego. \n\nCaperucita Roja. The game...");
     printf("\n\nRecuerda que cada una de las decisiones que tomes influirá en como terminarás el juego... intenta no morir c:\n");
 }
 
+/* FUNCION introContexto(): Nos da contexto del inicio de la historia sobre la que se va a trabajar, en este punto conectamos con main(), para
+poder acabar con el programa en puntos determinados, y esto con ayuda de los puntos de vida*/
+/* FECHA: 26 de marzo 2022 */
 int introContexto()
 {
     int vida, opcion;
@@ -75,6 +84,10 @@ int introContexto()
     return vida;
 }
 
+/* FUNCION introPostContexto(): De manera formal ya se inicia el juego como tal, mediante main() tambien
+se mantine el poder acabar con el programa dados los puntos de control establecidos, mediante la modificacion
+de los puntos de vida del usuario. */
+/* FECHA: 26 de marzo 2022 */
 int introPostContexto(int vida)
 {
     int opcion;
@@ -106,9 +119,12 @@ int introPostContexto(int vida)
     return vida;
 }
 
-/* ---------------------------- Comienza el modulo escrito por CARO ---------------------------- */
+/* ---------------------------- Comienza el modulo escrito por CARO VAZQUEZ ---------------------------- */
 
-// Función camino
+/* FUNCION escenarioCamino(): Segun el mapa diagrama de como funciona el programa de manera general esta es la primera seccion
+con diferentes caminos que se tiene, aqui se describen y tambien mediante estructuras de control se van sumando puntos de vida
+y tambien es que de manera personal por el usuario independientemente de como se desarolle el juego mediante main() se puede terminar*/
+/* FECHA: 25 de marzo 2022 */
 int escenarioCamino(int vida)
 {
 
@@ -261,8 +277,12 @@ int escenarioCamino(int vida)
     return vida;
 }
 
-/* ---------------------------- Bloque de codigo escrito por Erick ---------------------------- */
+/* ---------------------------- Bloque de codigo escrito por ERICK ARZAT ---------------------------- */
 
+/* Segunda parte de la historia a la que se llega con puntos de vida distintos dependiendo de las decisiones tomadas por
+el usuario previamente en la funcion anterior y justificada en el mapa guia de la hisotoria... como las funciones anteriores
+esta tabien puede se cortada de golpe si se quisiera... */
+/* FECHA: 25 de marzo 2022 */
 int escenarioCazador(int vida){
 
     int opcion, continuar;
