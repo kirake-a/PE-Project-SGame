@@ -1,5 +1,11 @@
 /*En este archivo mainProgram es donde se va a unir todo el codigo para verificar la funcionalidad del mismo */
 #include <stdio.h>
+// Datos que se utilizarán más adelante
+struct datos
+{
+    int poder;
+    int amigo;
+} partida;
 
 // Funciones de la presentacion del juego
 void presentacionInicial();
@@ -9,37 +15,44 @@ int introPostContexto(int vida);
 int escenarioCamino(int vida);
 // ElLenador funcion
 int escenarioCazador(int vida);
+// CasaAbuelita funcion
+int casaAbuelita(int vida);
+void final1(int vida);
 
 /* ---------------------------- Bloque de codigo escrito por RUBEN ALVARADO---------------------------- */
 
-/* FUNCION main(): Con esta funcion manejamos todo lo que ocurre con el resto de las funciones, se 
-puede decir que esta funcion es la que controla todo el programa segun las decisiones y los datos 
+/* FUNCION main(): Con esta funcion manejamos todo lo que ocurre con el resto de las funciones, se
+puede decir que esta funcion es la que controla todo el programa segun las decisiones y los datos
 que reciban las funciones especializadas. */
 /* FECHA: 26 de marzo 2022 */
-int main(){
+int main()
+{
     int vida;
 
     // Funciones para la presentacion del juego -- llamadas
     presentacionInicial();
     vida = introContexto();
 
-    if(vida > 0){
+    if (vida > 0)
+    {
         vida = introPostContexto(vida);
 
-        if(vida > 0){
+        if (vida > 0)
+        {
             // EscenarioCamino funcion -- llamadas
             vida = escenarioCamino(vida);
 
-            if(vida > 0){
+            if (vida > 0)
+            {
                 vida = escenarioCazador(vida); /* Falta leer el guion y comparar con el
                 el codigo y verificar la unidad entre code */
 
-                if(vida > 0){
-                    // Falta agregar el modulo de David... no se ha leido
+                if (vida > 0)
+                {
+                    vida = casaAbuelita(vida);
                 }
             }
         }
-
     }
 
     return 0;
@@ -68,16 +81,18 @@ int introContexto()
 
     vida = 3;
 
-    //Sentencia de control para poder finalizar el programa hasta este punto...
+    // Sentencia de control para poder finalizar el programa hasta este punto...
     printf("\n\nSi desea continuar presione 1, sino presione 0: ");
     scanf("%d", &opcion);
 
     /* Si la opcion es > 0 entonces se devuelven 0 puntos de vida y se sale de la estructura if de main
     lo que termina el programa... */
-    if(opcion > 0){
+    if (opcion > 0)
+    {
         vida = vida;
     }
-    else if (opcion <= 0){
+    else if (opcion <= 0)
+    {
         vida = 0;
     }
 
@@ -156,7 +171,8 @@ int escenarioCamino(int vida)
     }
 
     // ACCIONES DEL CAMINO 1, 2 Y 3
-    switch (camino1){
+    switch (camino1)
+    {
     case 1: // CAMINO DEL PRUEBLO
         printf("\nDecides tomar el ancho camino que lleva al pueblo. En el pueblo toda la gente te mira raro ");
         printf("\ndebido a que no está acostumbrada a ver rostros nuevos. Estando ahí ves un pequeño puesto");
@@ -199,10 +215,12 @@ int escenarioCamino(int vida)
 
         scanf("%d", &continuar);
 
-        if(continuar > 0){
+        if (continuar > 0)
+        {
             vida = vida;
         }
-        else if(continuar <= 0){
+        else if (continuar <= 0)
+        {
             vida = 0;
         }
         break;
@@ -283,11 +301,12 @@ int escenarioCamino(int vida)
 el usuario previamente en la funcion anterior y justificada en el mapa guia de la hisotoria... como las funciones anteriores
 esta tabien puede se cortada de golpe si se quisiera... */
 /* FECHA: 25 de marzo 2022 */
-int escenarioCazador(int vida){
+int escenarioCazador(int vida)
+{
 
     int opcion, continuar;
 
-    // Para elegir que opicón quieres hacer con el viejillo
+    // Para elegir que opción quieres hacer con el viejillo
     printf("\n\nSigues caminando hasta que a la izquierda del camino te topas con una antigua cabaña de madera.");
     printf("\nDecides tocar la puerta, entonces sale un hombre viejo.");
     printf("\nEl misterioso señor lleva puesto un abrigo de piel de lobo y tiene la cara llena de cicatrices.");
@@ -299,7 +318,8 @@ int escenarioCazador(int vida){
     printf("\nEscribe tu opción: ");
     scanf("%d", &opcion);
 
-    while (opcion < 1 || opcion > 3){
+    while (opcion < 1 || opcion > 3)
+    {
         printf("\n\n¡Esa opción no existe! Inténtalo de nuevo.");
         printf("\nEscribe '1' para regalarle un delicioso pan de tu canasta al viejo.");
         printf("\nSi deseas retar a un pobre viejito a un combate escribe '2'.");
@@ -308,7 +328,8 @@ int escenarioCazador(int vida){
         scanf("%d", &opcion);
     }
 
-    switch (opcion){
+    switch (opcion)
+    {
     case 1: // Amistad con el cazador
         printf("\n\nLe regalas al viejo el pan.");
         printf("\n-¡Está buenísimo!- Exclama el señor y bocado a bocado su expresión fría e ");
@@ -320,10 +341,14 @@ int escenarioCazador(int vida){
         printf("\nEscribe '1' para continuar haciendo amistades a lo largo de esta historia.");
         scanf("%d", &continuar);
 
-        if(continuar > 0){
+        partida.amigo = 1;
+
+        if (continuar > 0)
+        {
             vida = vida;
         }
-        else if(continuar <= 0){
+        else if (continuar <= 0)
+        {
             vida = 0;
         }
 
@@ -351,14 +376,17 @@ int escenarioCazador(int vida){
         printf("\nEl primer golpe te lastimó. Vida -1.");
 
         vida = vida - 1;
-        
+        partida.poder = 1;
+
         printf("\nSi quieres seguir demostrando tu fuerza a lo largo de esta historia escribe '1': .");
         scanf("%d", &continuar);
 
-        if (continuar > 0){
+        if (continuar > 0)
+        {
             vida = vida;
         }
-        else if (continuar <= 0){
+        else if (continuar <= 0)
+        {
             vida = 0;
         }
 
@@ -378,4 +406,107 @@ int escenarioCazador(int vida){
     }
 
     return vida;
+}
+
+/* ---------------------------- Comienza el modulo escrito por DAVID MUÑOZ ---------------------------- */
+
+/* FUNCION casaAbuelita(): Aqui su descripcion plox */
+/* FECHA: 24 de abril de 2022 */
+int casaAbuelita(int vida)
+{
+
+    int opcion;
+    // historia
+    printf("Caminas hasta llegar a la casa de tu abuela. Te percatas que el lobo está recostado en la cama \n");
+    printf("de tu abuela.\n\n");
+    // seleccionar opciones
+    printf("Para entrar sigilosamente por la ventana y agarrar al lobo desprevenido escribe  '1'.\n");
+    printf("Si prefieres entrar por la puerta escribe  '2'.\n\n\n");
+
+    scanf("%d", &opcion);
+
+    while (opcion < 1 || opcion > 2)
+    {
+        printf("Esa opción no existe ¡¿Qué tan difícil es presionar una tecla?!\n");
+        printf("Para entrar sigilosamente por la ventana y agarrar al lobo desprevenido escribe  '1'.\n");
+        printf("Si prefieres entrar por la puerta escribe  '2'.\n\n\n");
+
+        scanf("%d", &opcion);
+    }
+    // por la ventana
+    if (opcion == 1)
+    {
+        printf("Entras por la ventana y le metes un golpe al lobo. Entonces el lobo se levanta de la cama de\n ");
+        printf("tu abuela, puedes ver que es m?s grande que un lobo normal. Y de repente... te muerde el brazo\n\n");
+        vida = vida - 3;
+        // si vives y derrotaste al cazador
+        if (vida > 0 && partida.poder == 1)
+        {
+            printf("El combate contra el cazador te preparó para enfrentar al lobo. Con tu brazo bueno le lanzas un\n");
+            printf("gancho al lobo. El lobo se retuerce de dolor y después se abalanza sobre ti con las fauces\n");
+            printf("abiertas y de en eso le das una patada tan fuerte que rompe el techo de la casa de tu abuela.\n\n");
+            printf("Arrancas un trozo de  tu caperucita para vendarte la mordida del lobo. Finalmente le abres la\n");
+            printf("panza al lobo y sacas a tu abuela. Aprovechas la piel de lobo y te haces un saco como el del\n");
+            printf("cazador.\n\n");
+
+            printf("HAS ENCONTRADO EL FINAL ÉPICO\nGANASTE\n");
+            printf("FIN DEL JUEGO");
+        }
+        // si mueres o no derrotaste al cazador
+        else
+        {
+            printf("No te has recuperado de la mordida, cuando un colosal lobo... te lanza una lluvia de mordidas\n");
+            printf("tan fuertes que ning?n humano soportar?a semejante ataque. Al parecer no fue una buena idea\n");
+            printf("pelearse con un lobo tan grande ?Sigues ah?? ?No sigas la luz! No sigas la...\n\n");
+
+            printf("TE HA COMIDO EL LOBO\n");
+            printf("FIN DEL JUEGO");
+        }
+    }
+    // por la puerta
+    if (opcion == 2)
+    {
+        printf("Decides entrar por la puerta. Abres la puerta y ves al lobo acostado en la cama de tu abuela\n");
+        printf("??Por qu? tienes unos dientes tan grandes abuelita? ? Le preguntas al lobo que se encuentra\n");
+        printf("disfrazado de tu abuela.\n");
+        printf("??Para comerte mejor! ? Esto te hubiera respondido el lobo si los lobos hablaran.\n");
+        printf("Entonces...\n\n\n");
+
+        // pedir ayuda y amigo cazador
+        if (partida.amigo == 1)
+        {
+            printf("Gritars para pedir ayuda a tu amigo el cazador. Entonces llega el cazador y llena de plomo al\n");
+            printf("lobo. Te acercas al lobo para ver si est? muerto, pero en eso... te lanza un zarpazo con sus\n");
+            printf("?ltimas fuerzas.\n\n\n");
+            vida = vida - 2;
+            final1(vida);
+        }
+        else
+        {
+            printf("Pediste auxilio pero no hay nadie que te ayude. Entonces el lobo te ataca ?No puedes morir as?!\n");
+            printf("Este es un final muy malo para la historia.\n\n");
+
+            printf("TE HA COMIDO EL LOBO\n");
+            printf("FIN DEL JUEGO");
+        }
+    }
+
+    return vida;
+}
+
+// funcion que describe el tipo de final
+void final1(int vida)
+{
+    if (vida > 0)
+    {
+        printf("Bueno... que? final m?s aburrido. Mejor me voy a narrar otra historia\n\n");
+        printf("GANASTE DE UNA FORMA S?PER ABURRIDA\n");
+        printf("FIN DEL JUEGO");
+    }
+    else
+    {
+        printf("Moriste ya que no pudiste aguantar un pequeño rasgu?o del lobo.\n\n");
+        printf("TE HA MATADO EL LOBO\n");
+        printf("FIN DEL JUEGO");
+    }
 }
