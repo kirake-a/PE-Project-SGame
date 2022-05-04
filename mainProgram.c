@@ -410,7 +410,10 @@ int escenarioCazador(int vida)
 
 /* ---------------------------- Comienza el modulo escrito por DAVID MUÑOZ ---------------------------- */
 
-/* FUNCION casaAbuelita(): Aqui su descripcion plox */
+/* FUNCION casaAbuelita(): Ultima parte del programa. En esta parte el juego va finalizar si es que el usario no hay muerto
+previamente en la seccion dos, escrita por Erick; se sigue la misma dinamica de la toma de decisiones en el juego
+en la que el usuario tiene las posibilidades de ganar o perder dependiendo de sus decisiones y de las vidas que haya
+podido ganar o perder en pasos previos en el juego... */
 /* FECHA: 24 de abril de 2022 */
 int casaAbuelita(int vida)
 {
