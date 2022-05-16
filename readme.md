@@ -19,6 +19,6 @@ El programa completo puede resumirse con el siguiente diagrama en que se plantea
 
 # El programa main()
 Con todo lo definido anteriormente se escribe el código del programa, que se encuentra en este mismo repositorio. Cada módulo que se encuentra en este programa main()
-puede ser consultado en las brnaches con el mismo nombre.
+puede ser consultado en las branch correspondiente del mismo nombre.
 * [El código](https://github.com/kirake-a/PE-Project-SGame/blob/main/mainProgram.c)
 
