@@ -1,5 +1,6 @@
 /*En este archivo mainProgram es donde se va a unir todo el codigo para verificar la funcionalidad del mismo */
 #include <stdio.h>
+
 // Datos que se utilizarán más adelante
 struct datos
 {
@@ -482,6 +483,7 @@ int casaAbuelita(int vida)
             printf("lobo. Te acercas al lobo para ver si est? muerto, pero en eso... te lanza un zarpazo con sus\n");
             printf("?ltimas fuerzas.\n\n\n");
             vida = vida - 2;
+            
             final1(vida);
         }
         else
