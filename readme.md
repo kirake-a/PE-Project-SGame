@@ -17,3 +17,8 @@ se concentra en el siguiente documento de reglamentos para la escritura del cód
 El programa completo puede resumirse con el siguiente diagrama en que se plantea como funciona la historia junto con el código en sí...
 * [Diagrama](https://github.com/kirake-a/PE-Project-SGame/blob/main/Documentaci%C3%B3n/Diagrama%20de%20organizaci%C3%B3n.png)
 
+# El programa main()
+Con todo lo definido anteriormente se escribe el código del programa, que se encuentra en este mismo repositorio. Cada módulo que se encuentra en este programa main()
+puede ser consultado en las brnaches con el mismo nombre.
+* [El código](https://github.com/kirake-a/PE-Project-SGame/blob/main/mainProgram.c)
+
