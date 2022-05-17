@@ -95,7 +95,7 @@ int introContexto()
     int vida, opcion;
     vida = 0;
     printf("\n\nEs de noche y te acercas a la chimenea para calentarte. Tu madre se encuentra a tu lado.");
-    printf("\n-Ponte tu caperucita roka -te dice tu madre-. Hace mucho frio y tienes un largo camino por");
+    printf("\n-Ponte tu caperucita roja -te dice tu madre-. Hace mucho frio y tienes un largo camino por");
     printf("\ndelante.");
 
     printf("\n\nTe pones tu hermosa caperucita roja y te alistas para salir.");
