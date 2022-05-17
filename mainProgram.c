@@ -62,8 +62,29 @@ int main()
 /* FECHA: 26 de marzo 2022 */
 void presentacionInicial()
 {
-    printf("Bienvenido a este minijuego. \n\nCaperucita Roja. The game...");
-    printf("\n\nRecuerda que cada una de las decisiones que tomes influirá en como terminarás el juego... intenta no morir c:\n");
+    printf("\t\t\tBienvenido a este minijuego. ");
+    printf("\n\t\t\tRecuerda que cada una de las decisiones que tomes influirá en \n\t\t\tcomo terminarás el juego... intenta no morir c:\n");
+
+    printf("\n\t\t\t@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@@@@@@@@@@@@@@@'~~~     ~~~`@@@@@@@@@@@@@@@@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@@@@@@@@@@'                     `@@@@@@@@@@@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@@@@@@@'                           `@@@@@@@@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@@@@@'                               `@@@@@@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@@@'                                   `@@@@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@@'                                     `@@@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@'                                       `@@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@                                         @@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@'                      n,                 `@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@                     _/ | _                @@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@                    /'  `'/                @@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@a                 <~    .'                a@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@                 .'    |                 @@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@a              _/      |                a@@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@@a           _/      `.`.              a@@@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@@@a     ____/ '   |_ | |______        a@@@@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@@@@@a__/___/      /__| | |    |_   .a@@@@@@@@@@@@@@@");
+    printf("\n\t\t\t@@@@@@@@@@@@@/  (___.'| ______)| |_|         |@@@@@@@@@@@@@@@");
+    printf("\n\n\t\t\t               Caperucita Roja. The game...");
 }
 
 /* FUNCION introContexto(): Nos da contexto del inicio de la historia sobre la que se va a trabajar, en este punto conectamos con main(), para
@@ -78,12 +99,13 @@ int introContexto()
     printf("\ndelante.");
 
     printf("\n\nTe pones tu hermosa caperucita roja y te alistas para salir.");
-    printf("\n\n**Caperucita roja +3 de vida...**");
+    printf("\n**Caperucita roja +3 de vida...**");
 
     vida = 3;
 
     // Sentencia de control para poder finalizar el programa hasta este punto...
-    printf("\n\nSi desea continuar presione 1, sino presione 0: ");
+    printf("\n\nSi desea continuar presione 1, sino presione 0 ");
+    printf("\nEscribe tu opción: ");
     scanf("%d", &opcion);
 
     /* Si la opcion es > 0 entonces se devuelven 0 puntos de vida y se sale de la estructura if de main
@@ -107,7 +129,7 @@ de los puntos de vida del usuario. */
 int introPostContexto(int vida)
 {
     int opcion;
-
+    printf("---------------------------------------------------------------------------------------------------\n");
     printf("\n\n-¡La abuela se encuentra enferma y no se puede levantar de su cama! -dice con tristeza tu");
     printf("\nmadre-. ¿Crees que puedas entregarle esta canasta a tu abuela?");
 
@@ -115,12 +137,13 @@ int introPostContexto(int vida)
     printf("\nafuera, pero al pensar en tu querida abuela decides emprender la aventura con tal de ayudarla");
     printf("\ny le dices que sí a tu madre.");
 
-    printf("\n\n**Canasta +2 de vida**");
+    printf("\n**Canasta +2 de vida**");
 
     vida += 2;
 
     // Sentencia de control para continuar o finalizar el programa...
     printf("\n\nSi desea continuar presione 1, sino presione 0: ");
+    printf("\nEscribe tu opción: ");
     scanf("%d", &opcion);
 
     if (opcion > 0)
@@ -149,6 +172,7 @@ int escenarioCamino(int vida)
     bosque = 0;
 
     // PARA ELEGIR UN CAMINO DE LOS 3
+    printf("---------------------------------------------------------------------------------------------------\n");
     printf("\n\nSales de tu casa y caminas por la vereda mientras que el viento sacude tus cabellos y la");
     printf("\ncaperucita. Sigues hasta encontrarte con que la vereda por la que andabas se divide en tres");
     printf("\nangostos caminos. El primer camino tiene escrito en un hermoso letrero que va al pueblo, el ");
@@ -175,6 +199,7 @@ int escenarioCamino(int vida)
     switch (camino1)
     {
     case 1: // CAMINO DEL PRUEBLO
+        printf("---------------------------------------------------------------------------------------------------\n");
         printf("\nDecides tomar el ancho camino que lleva al pueblo. En el pueblo toda la gente te mira raro ");
         printf("\ndebido a que no está acostumbrada a ver rostros nuevos. Estando ahí ves un pequeño puesto");
         printf("\nde madera donde un señor viejo y de cara horrenda vende manzanas. Tienes hambre y se te");
@@ -187,6 +212,7 @@ int escenarioCamino(int vida)
 
         while (pueblo < 1 || pueblo > 2)
         {
+            printf("---------------------------------------------------------------------------------------------------\n");
             printf("\n\n¡Esa opción no existe! Intentalo de nuevo.");
             printf("\n\nSi eres una horrible persona y quieres robarle unas manzanas a un pobre viejo escribe '1':");
             printf("\nSi decides ser amable y pedir una manzana escribe '2'");
@@ -196,6 +222,7 @@ int escenarioCamino(int vida)
 
         if (pueblo == 1)
         {
+            printf("---------------------------------------------------------------------------------------------------\n");
             printf("\nDEFINITIVAMENTE ERES UNA PERSONA MALA QUE NUNCA QUERRIA CONOCER");
             printf("\nasí que le robas no una manzana, ni dos manzanas, sino tres manzanas al");
             printf("\npobre viejo de la cara horrible.");
@@ -207,11 +234,13 @@ int escenarioCamino(int vida)
         }
         else
         {
+            printf("---------------------------------------------------------------------------------------------------\n");
             printf("\nLe preguntas amablemente al viejo si te podría regalar una manzana.");
             printf("\n-¡No! -Grita el viejo.");
             printf("\nNo me digas que creíste que en serio te darían una manzana gratis. Te recomiendo que para la");
             printf("\npróxima no andes por ahí sin dinero.");
             printf("\nPersona que anda por ahí sin dinero escriba '1' para continuar. ");
+            printf("\nEscribe tu opción: ");
         }
 
         scanf("%d", &continuar);
@@ -227,6 +256,7 @@ int escenarioCamino(int vida)
         break;
 
     case 2: // CAMINO DEL BOSQUE
+        printf("---------------------------------------------------------------------------------------------------\n");
         printf("\nAhora se que te gustan las aventuras porque elegiste esta opción, pero... ¿Apoco creíste que");
         printf("\nir por el bosque sería una aventura? Digo, así es la historia original, aunque tenía la esperanza");
         printf("\nde que decidieras algo más interesante.");
@@ -241,6 +271,7 @@ int escenarioCamino(int vida)
 
         while (bosque < 1 || bosque > 2)
         {
+            printf("---------------------------------------------------------------------------------------------------\n");
             printf("\n\n¡Esa opción no existe! Intentalo de nuevo.");
             printf("\n\nPara tomar un atajo por el río escribe '1'");
             printf("\nSi te gusta tardarte y caminar mucho aunque te duelan los píes escribe '2' para seguir el camino");
@@ -250,6 +281,7 @@ int escenarioCamino(int vida)
 
         if (bosque == 1)
         {
+            printf("---------------------------------------------------------------------------------------------------\n");
             printf("\nSolo a ti se te ocurre cruzar por el río con tanto frío, así que te da un resfriado.");
             printf("\nCruzaste por el río -1 de vida.");
             vida = vida - 1;
@@ -257,10 +289,12 @@ int escenarioCamino(int vida)
         }
         else
         {
+            printf("---------------------------------------------------------------------------------------------------\n");
             printf("\nNo puedo creer que quieras seguir la historia al pié de la letra.");
             printf("\nSigues por el camino y caminas, caminas, caminas, caminas y caminas. Aburrido ¿No?");
             printf("\nNo puedes decir que no te lo advertí.");
             printf("\nPara seguir caminando escriba '1' ");
+            printf("\nEscribe tu opción: ");
         }
 
         scanf("%d", &continuar); // Ok no evalue aquí si se pone otro número, porque solo es para poder abajo la función que sigue
@@ -276,10 +310,12 @@ int escenarioCamino(int vida)
         break;
 
     case 3: // CAMINO DEL DESIERTO de hielo
+        printf("---------------------------------------------------------------------------------------------------\n");
         printf("\nPor valiente, quizá también porque te faltan algunos tornillos, decides ir por el desierto de hielo ");
         printf("\ndonde te quema el frío... -1 de vida");
         vida = vida - 1;
         printf("\nValiente, escriba '1' para continuar ");
+        printf("\nEscribe tu opción: ");
 
         scanf("%d", &continuar);
 
@@ -308,6 +344,7 @@ int escenarioCazador(int vida)
     int opcion, continuar;
 
     // Para elegir que opción quieres hacer con el viejillo
+    printf("---------------------------------------------------------------------------------------------------\n");
     printf("\n\nSigues caminando hasta que a la izquierda del camino te topas con una antigua cabaña de madera.");
     printf("\nDecides tocar la puerta, entonces sale un hombre viejo.");
     printf("\nEl misterioso señor lleva puesto un abrigo de piel de lobo y tiene la cara llena de cicatrices.");
@@ -321,6 +358,7 @@ int escenarioCazador(int vida)
 
     while (opcion < 1 || opcion > 3)
     {
+        printf("---------------------------------------------------------------------------------------------------\n");
         printf("\n\n¡Esa opción no existe! Inténtalo de nuevo.");
         printf("\nEscribe '1' para regalarle un delicioso pan de tu canasta al viejo.");
         printf("\nSi deseas retar a un pobre viejito a un combate escribe '2'.");
@@ -332,6 +370,7 @@ int escenarioCazador(int vida)
     switch (opcion)
     {
     case 1: // Amistad con el cazador
+        printf("---------------------------------------------------------------------------------------------------\n");
         printf("\n\nLe regalas al viejo el pan.");
         printf("\n-¡Está buenísimo!- Exclama el señor y bocado a bocado su expresión fría e ");
         printf("\nintimidante se va transformado en una sonrisa. ");
@@ -340,6 +379,7 @@ int escenarioCazador(int vida)
 
         printf("\n\n¡Haz hecho un amigo, ahora tienes el poder de la amistad! Uy que cursi.");
         printf("\nEscribe '1' para continuar haciendo amistades a lo largo de esta historia.");
+        printf("\nEscribe tu opción: ");
         scanf("%d", &continuar);
 
         partida.amigo = 1;
@@ -356,6 +396,7 @@ int escenarioCazador(int vida)
         break;
 
     case 2: // Combate con el cazador
+        printf("---------------------------------------------------------------------------------------------------\n");
         printf("\n\nLe dices al viejo que lo que quieres es un oponente digno para pelear, entonces...");
         printf("\nEl señor se quita su abrigo de piel de lobo y deja al descubierto su torso repleto de cicatrices.");
         printf("\nEl viejo es robusto y parece que tiene la fuerza de un oso. ");
@@ -380,6 +421,7 @@ int escenarioCazador(int vida)
         partida.poder = 1;
 
         printf("\nSi quieres seguir demostrando tu fuerza a lo largo de esta historia escribe '1': .");
+        printf("\nEscribe tu opción: ");
         scanf("%d", &continuar);
 
         if (continuar > 0)
@@ -394,12 +436,13 @@ int escenarioCazador(int vida)
         break;
 
     case 3: // Viejo enojado
+        printf("---------------------------------------------------------------------------------------------------\n");
         printf("\n\nLe dices al anciano que es un viejo raro y te largas. El viejo cierra la puerta con fuerza,");
         printf("\nde repente... sale el lobo y lo siguiente es demasiado explícito para describir.");
         printf("\nEso te pasa por molestar a un vejete ¿Sigues ahí? ¡No sigas la luz! No sigas la...");
 
         printf("\n\nTE HA COMIDO EL LOBO");
-        printf("\nFIN DEL JUEGO ");
+        printf("\nFIN DEL JUEGO");
 
         vida = 0;
 
@@ -421,31 +464,35 @@ int casaAbuelita(int vida)
 
     int opcion;
     // historia
+    printf("---------------------------------------------------------------------------------------------------\n");
     printf("Caminas hasta llegar a la casa de tu abuela. Te percatas que el lobo está recostado en la cama \n");
     printf("de tu abuela.\n\n");
     // seleccionar opciones
     printf("Para entrar sigilosamente por la ventana y agarrar al lobo desprevenido escribe  '1'.\n");
-    printf("Si prefieres entrar por la puerta escribe  '2'.\n\n\n");
-
+    printf("Si prefieres entrar por la puerta escribe  '2'.");
+    printf("\nEscribe tu opción: ");
     scanf("%d", &opcion);
 
     while (opcion < 1 || opcion > 2)
     {
+        printf("---------------------------------------------------------------------------------------------------\n");
         printf("Esa opción no existe ¡¿Qué tan difícil es presionar una tecla?!\n");
         printf("Para entrar sigilosamente por la ventana y agarrar al lobo desprevenido escribe  '1'.\n");
-        printf("Si prefieres entrar por la puerta escribe  '2'.\n\n\n");
-
+        printf("Si prefieres entrar por la puerta escribe  '2'.");
+        printf("\nEscribe tu opción: ");
         scanf("%d", &opcion);
     }
     // por la ventana
     if (opcion == 1)
     {
+        printf("---------------------------------------------------------------------------------------------------\n");
         printf("Entras por la ventana y le metes un golpe al lobo. Entonces el lobo se levanta de la cama de\n ");
         printf("tu abuela, puedes ver que es m?s grande que un lobo normal. Y de repente... te muerde el brazo\n\n");
         vida = vida - 3;
         // si vives y derrotaste al cazador
         if (vida > 0 && partida.poder == 1)
         {
+            printf("---------------------------------------------------------------------------------------------------\n");
             printf("El combate contra el cazador te preparó para enfrentar al lobo. Con tu brazo bueno le lanzas un\n");
             printf("gancho al lobo. El lobo se retuerce de dolor y después se abalanza sobre ti con las fauces\n");
             printf("abiertas y de en eso le das una patada tan fuerte que rompe el techo de la casa de tu abuela.\n\n");
@@ -459,6 +506,7 @@ int casaAbuelita(int vida)
         // si mueres o no derrotaste al cazador
         else
         {
+            printf("---------------------------------------------------------------------------------------------------\n");
             printf("No te has recuperado de la mordida, cuando un colosal lobo... te lanza una lluvia de mordidas\n");
             printf("tan fuertes que ning?n humano soportar?a semejante ataque. Al parecer no fue una buena idea\n");
             printf("pelearse con un lobo tan grande ?Sigues ah?? ?No sigas la luz! No sigas la...\n\n");
@@ -470,6 +518,7 @@ int casaAbuelita(int vida)
     // por la puerta
     if (opcion == 2)
     {
+        printf("---------------------------------------------------------------------------------------------------\n");
         printf("Decides entrar por la puerta. Abres la puerta y ves al lobo acostado en la cama de tu abuela\n");
         printf("??Por qu? tienes unos dientes tan grandes abuelita? ? Le preguntas al lobo que se encuentra\n");
         printf("disfrazado de tu abuela.\n");
@@ -479,15 +528,17 @@ int casaAbuelita(int vida)
         // pedir ayuda y amigo cazador
         if (partida.amigo == 1)
         {
+            printf("---------------------------------------------------------------------------------------------------\n");
             printf("Gritars para pedir ayuda a tu amigo el cazador. Entonces llega el cazador y llena de plomo al\n");
             printf("lobo. Te acercas al lobo para ver si est? muerto, pero en eso... te lanza un zarpazo con sus\n");
             printf("?ltimas fuerzas.\n\n\n");
             vida = vida - 2;
-            
+
             final1(vida);
         }
         else
         {
+            printf("---------------------------------------------------------------------------------------------------\n");
             printf("Pediste auxilio pero no hay nadie que te ayude. Entonces el lobo te ataca ?No puedes morir as?!\n");
             printf("Este es un final muy malo para la historia.\n\n");
 
@@ -504,12 +555,14 @@ void final1(int vida)
 {
     if (vida > 0)
     {
+        printf("---------------------------------------------------------------------------------------------------\n");
         printf("Bueno... que? final m?s aburrido. Mejor me voy a narrar otra historia\n\n");
         printf("GANASTE DE UNA FORMA S?PER ABURRIDA\n");
         printf("FIN DEL JUEGO");
     }
     else
     {
+        printf("---------------------------------------------------------------------------------------------------\n");
         printf("Moriste ya que no pudiste aguantar un pequeño rasgu?o del lobo.\n\n");
         printf("TE HA MATADO EL LOBO\n");
         printf("FIN DEL JUEGO");
